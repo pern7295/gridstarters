@@ -1,53 +1,62 @@
+<!--ØVELSE 2-->
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Css Grid</title>
     <style>
-     * {
+        * {
             margin: 0;
         }
 
         .container {
-
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat (4, 1fr);
+            grid-auto-rows: 1fr;
+            grid-gap: 5px;
         }
 
-        .item {
-
-        }
+        .item {}
 
         .item-a {
-
+            grid-column: 1 / 3;
+            background-color: crimson;
         }
 
         .item-b {
-
+            grid-column: 3 / 5;
+            background-color: deeppink;
         }
 
         .item-c {
-
+            grid-column: 1 / 2;
+            background-color: dodgerblue;
         }
 
         .item-d {
-
-
+            grid-column: 2 / 5;
+            background-color: darkslategray
         }
 
-        @media screen and (min-width:768px) {
-
-
-        }
+        @media screen and (min-width:768px) {}
 
     </style>
 
 </head>
+
 <body>
-   <main class="container">
-       <div class="item item-a">A</div>
-       <div class="item item-b">B</div>
-       <div class="item item-c">C</div>
-       <div class="item item-d">D</div>
-   </main>
+    <main class="container">
+        <div class="item item-a">A</div>
+        <div class="item item-b">B</div>
+        <div class="item item-c">C</div>
+        <div class="item item-d">D</div>
+    </main>
 
 </body>
+
 </html>
