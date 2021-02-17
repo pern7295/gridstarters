@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <title>Css Grid</title>
     <style>
+        /*
         * {
             margin: 0;
         }
@@ -45,8 +46,54 @@
             grid-row: 4 /5;
             background-color: aquamarine;
         }
+*/
 
-        @media screen and (min-width:768px) {}
+        * {
+            margin: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: "header" "sidebar" "main" "footer";
+            grid-template-rows: 1fr 2fr 1fr;
+            grid-gap: 5px;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .item {}
+
+        .item-a {
+            grid-area: header;
+            background-color: orange;
+        }
+
+        .item-b {
+            grid-area: sidebar;
+            background-color: violet;
+        }
+
+        .item-c {
+            grid-area: main;
+            background-color: cadetblue;
+        }
+
+        .item-d {
+            grid-area: footer;
+            background-color: aquamarine;
+        }
+
+        @media screen and (min-width:768px) {
+            .container {
+                grid-template-areas: "header header" "sidebar main" "footer footer";
+            }
+        }
+
+        @media screen and (min-width:1000px) {
+            .container {
+                grid-template-areas: "header header header" "sidebar main main" "footer footer footer";
+            }
+        }
 
     </style>
 
