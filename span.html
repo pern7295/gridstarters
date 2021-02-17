@@ -6,8 +6,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Css Grid</title>
+    <title>Øvelse 2</title>
     <style>
+        /*
         * {
             margin: 0;
         }
@@ -40,6 +41,45 @@
 
         .item-d {
             grid-column: 2 / 5;
+            background-color: darkslategray
+        }
+*/
+
+        * {
+            margin: 0;
+        }
+
+        .container {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 1fr;
+            grid-gap: 5px;
+        }
+
+        .item {}
+
+        .item-a {
+            grid-column: span 2;
+            grid-row: span 2;
+            background-color: crimson;
+        }
+
+        .item-b {
+            grid-column: span 2;
+            grid-row: span 2;
+            background-color: deeppink;
+        }
+
+        .item-c {
+            grid-column: span 1;
+            grid-row: span 2;
+            background-color: dodgerblue;
+        }
+
+        .item-d {
+            grid-column: span 3;
+            grid-row: span 2;
             background-color: darkslategray
         }
 
