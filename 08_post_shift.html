@@ -13,7 +13,9 @@
             max-width: 100%;
         }
 
-        main {}
+        main {
+            display:
+        }
 
         article {
             min-height: 100px;
@@ -41,6 +43,13 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+            }
+            article:nth-child(even) {}
+            article:nth-child(4n-1) {
+                grid-column: 2 / 3;
+            }
+            article:nth-child(odd) {
+                background: #fff;
             }
         }
 
